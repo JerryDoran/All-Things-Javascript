@@ -92,3 +92,28 @@ console.log(`The total is ${sum}`);
 console.log(`The highest score is ${max}`);
 
 console.log(maxScore);
+
+// SEARCHING AN ARRAY FOR A VALUE
+let myarr = [1, 5, 6, 10, 11, 12, 14];
+
+// Returns the index or position of the value you want to search for.
+// If the item you are searching for is not found in the array the indexOf method
+// will return a -1.
+// Can check if the return value of this method is greater than -1.  If it is then
+// you know that the value you are looking for is inside the array somewhere.
+console.log(myarr.indexOf(11));
+
+// FINDINDEX() AND FIND() METHODS OF AN ARRAY
+
+let over12 = function(elem, index, myarr) {
+  console.log(elem + ' - ' + index + ' - ' + ' - ' + myarr);
+
+  // Returns a true or false value - predicate function
+  return elem > 12;
+};
+
+console.log(myarr.findIndex(over12));
+
+let result = myarr.find(elem => elem > 10 && elem < 12);
+
+console.log(result);
