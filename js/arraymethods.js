@@ -117,3 +117,32 @@ console.log(myarr.findIndex(over12));
 let result = myarr.find(elem => elem > 10 && elem < 12);
 
 console.log(result);
+
+// SORT METHOD
+let things = ['Building', 'car', 'bicycle', 'automobile', 'Tree', 'house'];
+
+things.sort();
+
+console.log(things);
+
+// CASE INSENSITIVE SORT - IF THE FUNCTION RETURNS A NEGATIVE NUMBER THE FIRST ARGUMENT
+// WILL APPEAR BEFORE THE SECOND ARGUMENT.  IF THE FUNCTION RETURNS A POSITIVE NUMBER
+// THE SECOND ARGUMENT WILL APPEAR BEFORE THE FIRST ARGUMENT.  IF FUNCTION RETURNS
+// A ZERO VALUE THEN THE TWO ARGUMENTS ARE EQUAL.
+things.sort((a, b) => {
+  // Convert arguments to lower case
+  let x = a.toLowerCase();
+  let y = b.toLowerCase();
+
+  if (x < y) {
+    return -1;
+  }
+
+  if (y < x) {
+    return 1;
+  }
+
+  return 0;
+});
+
+console.log(things);
